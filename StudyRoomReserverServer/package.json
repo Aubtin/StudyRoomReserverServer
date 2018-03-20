@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "description": "StudyRoomReserverServer",
   "main": "app.js",
+  "dependencies": {
+    "ecdsa-sig-formatter": "^1.0.9",
+    "firebase-admin": "^4.0.4",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.10.0",
+    "request": "^2.79.0",
+    "xtend": "^4.0.1"
+  },
   "author": {
     "name": "Aubtin"
   }

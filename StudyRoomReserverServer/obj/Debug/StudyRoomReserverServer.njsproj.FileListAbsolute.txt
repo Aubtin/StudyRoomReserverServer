@@ -1,0 +1,3 @@
+C:\Users\Aubtin\Documents\Room Request Files\Node Files\Cleaned Up for Git\StudyRoomReserverServer\StudyRoomReserverServer\obj\Debug\StudyRoomReserverServer.njsprojResolveAssemblyReference.cache
+C:\Users\Aubtin\Documents\Room Request Files\Node Files\Cleaned Up for Git\StudyRoomReserverServer\StudyRoomReserverServer\obj\Debug\StudyRoomReserverServer.njsproj.CoreCompileInputs.cache
+C:\Users\Aubtin\Documents\Room Request Files\Node Files\Cleaned Up for Git\StudyRoomReserverServer\StudyRoomReserverServer\bin\Microsoft.NodejsTools.WebRole.dll
