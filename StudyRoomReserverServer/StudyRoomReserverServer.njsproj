@@ -29,6 +29,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="date.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="secretKeys.js">
       <SubType>Code</SubType>
     </Compile>
