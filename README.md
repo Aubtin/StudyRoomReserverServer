@@ -13,5 +13,8 @@ Doesn't confirm the room was reserved, just assumes and stores in DB...
 
 Not partitioned, so the app only works for one group of users... Some of the base exists to partition it out though.
 
-Need to switch some of the remaining "deasync" stuff to Promises... Was initially written when I was learning all of this, so a little messy.
+Need to switch some of the remaining "deasync" stuff to Promises... Was initially written when I was learning, so it's kind of messy.
+
+Really messy, but mostly works.
+
 Created late Jan. 2017
