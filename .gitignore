@@ -83,3 +83,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#Secret Keys
+secretKeys.js
+serviceAccountRoomRequest.json

@@ -1,0 +1,9 @@
+{
+  "name": "study-room-reserver-server",
+  "version": "0.0.0",
+  "description": "StudyRoomReserverServer",
+  "main": "app.js",
+  "author": {
+    "name": "Aubtin"
+  }
+}
