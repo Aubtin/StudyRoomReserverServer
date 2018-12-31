@@ -1,3 +1,7 @@
+/*
+    Notes:
+    Time saved in UTC, but checks are done in PST. Should be fine, since the
+*/
 var admin = require('firebase-admin');
 var request = require('request');
 var $ = require('jquery');
@@ -41,8 +45,11 @@ function monitorPastTimeBlock() {
         console.log("Checking for past reservations...");
         snapshot.forEach(function (snapshotMain) {
             snapshotMain.forEach(function (snapshotEach) {
+                console.log("Checking past reservation.");
                 //Remove if key is older time than current. 
                 var currentTimeDate = getCurrentTimeByTimeZone();
+                // console.log("CurrentTimeDate: ")
+                // console.log("Current: " + currentTimeDate.valueOf().toString() + " SnapshotTime: " + (Number(snapshotEach.key) + 1800000))
                 if (currentTimeDate.valueOf().toString() > (Number(snapshotEach.key) + 1800000)) {
                     console.log(snapshotEach.key + " expired at " + currentTimeDate.valueOf().toString() + ".");
                     snapshotEach.ref.remove();
@@ -449,7 +456,7 @@ function addDays(daysAdd) {
 
 //Used in places where the server time zone is important such as for past event deletions and notifications.
 function getCurrentTimeByTimeZone() {
-    return new Date().toLocaleString("en-US", { timeZone: TIMEZONE });
+    return Date.parse(new Date().toLocaleString("en-US", { timeZone: TIMEZONE })).valueOf();
 }
 
 // start listening
@@ -458,7 +465,15 @@ listenForNewRoomRequests();
 checkInNotificationSystemListener();
 
 //Check for past reservations. (60 seconds)
-setInterval(monitorPastTimeBlock, 60000);
+// setInterval(monitorPastTimeBlock, 60000);
+monitorPastTimeBlock();
+
+console.log("\n\nDate: " + getCurrentTimeByTimeZone());
+var time = {hour:18, minute:15};
+         
+// console.log("Today: " + Date.today().first());
+// console.log("Today2: " + Date.today().at(new Date()));
+
 
 //Periodical reservation update check. (12 hours) 43200000
 setInterval(periodicReservationCheck, 43200000);
